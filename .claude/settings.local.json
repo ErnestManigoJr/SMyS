@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(cd \"C:\\\\Users\\\\Ernest\\\\smys-mvp-v2_1\\\\smys-mvp-v2\\\\server\"; Start-Process node -ArgumentList \"index.js\" -PassThru | ForEach-Object { $p = $_; Start-Sleep 2; $p })",
+      "Bash(node -e \"require\\('http'\\).get\\('http://localhost:4000/health', r => console.log\\('UP', r.statusCode\\)\\).on\\('error', e => console.log\\('DOWN', e.message\\)\\)\")",
+      "Bash(npm.cmd run *)",
+      "Bash(npx vite *)",
+      "Bash(node -e ' *)",
+      "Bash(ls client/.env* server/.env*)",
+      "Bash(cat .gitignore)",
+      "Bash(git init *)",
+      "Bash(git remote *)",
+      "Bash(git branch *)",
+      "Bash(git add *)"
+    ]
+  }
+}

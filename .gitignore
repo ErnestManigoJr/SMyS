@@ -1,0 +1,11 @@
+node_modules/
+dist/
+.env
+.env.local
+*.env.local
+*.webm
+server/data/
+
+# env files with secrets — never commit these
+client/.env.local
+server/.env

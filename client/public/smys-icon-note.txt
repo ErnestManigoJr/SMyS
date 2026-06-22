@@ -1,0 +1,6 @@
+Place your 192x192 and 512x512 PNG icons here:
+  smys-icon-192.png
+  smys-icon-512.png
+
+Quick way: go to https://favicon.io/favicon-generator/
+Type "SMyS", choose a purple background (#7c3aed), download, rename the files.
