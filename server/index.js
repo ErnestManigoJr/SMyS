@@ -12,7 +12,7 @@ const PORT = process.env.PORT || 4000;
 
 const allowedOrigins = process.env.ALLOWED_ORIGINS
   ? process.env.ALLOWED_ORIGINS.split(',').map(o => o.trim())
-  : ['http://localhost:5173', 'http://localhost:4173'];
+  : ['http://localhost:5173', 'http://localhost:4173', 'https://s-my-s.vercel.app'];
 
 app.use(cors({ origin: (o, cb) => (!o || allowedOrigins.includes(o)) ? cb(null, true) : cb(new Error('CORS: ' + o)) }));
 app.use(express.json({ limit: '20mb' }));
