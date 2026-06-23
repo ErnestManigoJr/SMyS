@@ -10,7 +10,7 @@ import { getVideoEl, applyCommand, isYouTubeUrl, toYouTubeEmbed, setYTIframe } f
 import { useTwinThoughts } from '../lmd/useTwinThoughts';
 import { REACTION_DISPLAY_MS } from '../lmd/reactionTriggers';
 
-const API = import.meta.env.VITE_SERVER_URL || 'http://localhost:4000';
+const API = import.meta.env.VITE_SERVER_URL || 'https://smys-production.up.railway.app';
 
 export default function Room() {
   const {
@@ -188,7 +188,7 @@ export default function Room() {
       }
 
       if (token && rid) {
-        const livekitUrl = import.meta.env.VITE_LIVEKIT_URL;
+        const livekitUrl = import.meta.env.VITE_LIVEKIT_URL || 'wss://smys-x5zur9v7.livekit.cloud';
         console.log('[SMyS Room] calling initLiveKit | rid:', rid, '| livekitUrl:', livekitUrl || '(none — demo mode)');
         if (livekitUrl) {
           await initLiveKit(livekitUrl, token, {
@@ -404,7 +404,7 @@ export default function Room() {
           ? <span style={{ color: '#34d399' }}>● Live</span>
           : <span style={{ color: '#f87171' }}>● Not connected</span>
         }
-        {!import.meta.env.VITE_LIVEKIT_URL && (
+        {!(import.meta.env.VITE_LIVEKIT_URL || 'wss://smys-x5zur9v7.livekit.cloud') && (
           <span style={{ fontSize: 11, color: '#888', marginLeft: 8 }}>Demo mode</span>
         )}
       </div>

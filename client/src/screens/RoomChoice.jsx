@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useAppStore } from '../store/useAppStore';
 
-const API = import.meta.env.VITE_SERVER_URL || 'http://localhost:4000';
+const API = import.meta.env.VITE_SERVER_URL || 'https://smys-production.up.railway.app';
 
 export default function RoomChoice() {
   const { displayName, setRoomId, setRoomToken, setScreen } = useAppStore();
